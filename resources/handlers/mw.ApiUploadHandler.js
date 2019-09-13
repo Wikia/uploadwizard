@@ -88,12 +88,12 @@
 		switch ( code ) {
 			case 'duplicate':
 				duplicates = result.upload.warnings.duplicate;
-				if ( result.upload.warnings.exists && result.upload.warnings.nochange ) {
+				/*if ( result.upload.warnings.exists && result.upload.warnings.nochange ) {
 					// An existing same (nochange) file will not show up as
 					// duplicate, but it should also be present in order to
 					// figure out how to process the attempted upload)
 					duplicates.push( result.upload.warnings.exists );
-				}
+				}*/
 				this.processDuplicateError( code, result, result.upload.warnings.duplicate );
 				return;
 			case 'nochange':
