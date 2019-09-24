@@ -144,6 +144,9 @@ class UploadWizardTutorial {
 		if ( $useMap ) {
 			$areaAltText = wfMessage( 'mwe-upwiz-help-desk' )->text();
 
+			// Override URL for Gamepedia
+			$helpDeskHref = "https://help.gamepedia.com/Images";
+
 			$area = Html::element( 'area', [
 				'shape' => 'rect',
 				'coords' => $buttonCoords,
@@ -151,6 +154,7 @@ class UploadWizardTutorial {
 				'alt' => $areaAltText,
 				'title' => $areaAltText,
 				'id' => 'mwe-upwiz-tutorial-helpdesk',
+				'target' => '_blank'
 			] );
 
 			$imgHtml = Html::rawElement(
